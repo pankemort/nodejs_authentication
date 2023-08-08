@@ -116,7 +116,7 @@ app.post("/register" , async (req,res)=>{
 
 app.post('/login' , async (req ,res) =>{
     const {email , password} = req.body
-    let user = await Users.findOne({email})
+    let user = await Users.findOne({email}) //ad
 
     if(!user){
          return res.redirect('/register')
